@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap'
 import Rating from '../components/Rating'
 import axios from 'axios'
+import Table from '../components/Table'
 
 const ProductScreen = ({ match }) => {
   const [product, setProduct] = useState({})
@@ -80,6 +81,25 @@ const ProductScreen = ({ match }) => {
           </Card>
         </Col>
       </Row>
+      <Table
+        data={[
+          {
+            id: 101,
+            name: 'Asif',
+            email: 'Asif@gmail.com',
+          },
+          {
+            id: 102,
+            name: 'Ryan',
+            email: 'Ryan@gmail.com',
+          },
+          {
+            id: 103,
+            name: 'Nirmal',
+            email: 'Nirmal@gmail.com',
+          },
+        ]}
+      ></Table>
     </>
   )
 }
